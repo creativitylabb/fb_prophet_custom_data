@@ -82,7 +82,7 @@ def predict_fb(df,time_column):
         fig1 = go.Figure()
         fig1.add_trace(go.Scatter(x=result['date'], y=result['predicted ' + str(predict_column)], name='predicted'))
         fig1.add_trace(go.Scatter(x=result['date'], y=result[predict_column], name='actual'))
-        fig1.layout.update(title_text='Prediction for 5 days into the future', xaxis_rangeslider_visible=False)
+        fig1.layout.update(title_text='Predictions vs actual', xaxis_rangeslider_visible=False)
         st.plotly_chart(fig1)
 
 
