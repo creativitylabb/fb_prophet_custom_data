@@ -41,7 +41,7 @@ def predict_fb(df,time_column):
     print('selected to predict ', columns)
     print('the rest of columns', options)
 
-    with st.button("Predict"):
+    if st.button("Predict"):
         df.index = df[time_column]
         df.index.sort_values()
         df = df.interpolate(method='linear', axis=0).ffill().bfill()
